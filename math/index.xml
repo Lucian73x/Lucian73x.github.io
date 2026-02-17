@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Maths on Lucian73x&#39;s Note</title>
+    <link>https://Lucian73x.github.io/math/</link>
+    <description>Recent content in Maths on Lucian73x&#39;s Note</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 17 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://Lucian73x.github.io/math/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>机器学习的数学</title>
+      <link>https://Lucian73x.github.io/math/contents_ml_math/</link>
+      <pubDate>Tue, 17 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://Lucian73x.github.io/math/contents_ml_math/</guid>
+      <description>&lt;p&gt;学习材料: 《机器学习的数学》, 雷明, 人民邮电出版社&lt;/p&gt;&#xA;&lt;p&gt;记录了学习过程中不熟悉的内容, 对一些内容进行了适当的补充. 由于本人有数学系的背景, 故并不是从零开始, 从而内容并不全面.&lt;/p&gt;&#xA;&lt;h3 id=&#34;第一章-一元函数微积分&#34;&gt;第一章 一元函数微积分&lt;/h3&gt;</description>
+    </item>
+  </channel>
+</rss>
