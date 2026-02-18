@@ -6,8 +6,15 @@
     <description>Recent content in Home on Lucian73x&#39;s Note</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 18 Feb 2026 11:44:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 18 Feb 2026 17:59:47 +0800</lastBuildDate>
     <atom:link href="https://Lucian73x.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VSCode快捷键速查(Mac版)</title>
+      <link>https://Lucian73x.github.io/post/vscode%E5%BF%AB%E6%8D%B7%E9%94%AE%E9%80%9F%E6%9F%A5mac%E7%89%88/</link>
+      <pubDate>Wed, 18 Feb 2026 17:59:47 +0800</pubDate>
+      <guid>https://Lucian73x.github.io/post/vscode%E5%BF%AB%E6%8D%B7%E9%94%AE%E9%80%9F%E6%9F%A5mac%E7%89%88/</guid>
+      <description>&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th style=&#34;text-align: left&#34;&gt;快捷键&lt;/th&gt;&#xA;          &lt;th style=&#34;text-align: center&#34;&gt;功能&lt;/th&gt;&#xA;          &lt;th style=&#34;text-align: left&#34;&gt;快捷键&lt;/th&gt;&#xA;          &lt;th style=&#34;text-align: center&#34;&gt;功能&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;Cmd+←&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;移动到行前&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;Cmd+C&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;复制(未选中文本时, 复制当前行)&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;Cmd+→&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;移动到行后&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;Cmd+X&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;剪切(未选中文本时, 剪切当前行)&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;Cmd+↑&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;移动到首行&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;Opt+点击&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;多光标&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;Cmd+↓&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;移动到末行&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;Cmd+Opt+↑&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;向上插入光标&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;Opt+←&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;移动到单词前&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;Cmd+Opt+↓&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;向下插入光标&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;Opt+→&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;移动到单词后&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;Cmd+F&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;查找&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;Ctrl+G&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;跳转到某一行&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;Cmd+Opt+F&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: center&#34;&gt;替换&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;</description>
+    </item>
     <item>
       <title>自然常数的相关补充</title>
       <link>https://Lucian73x.github.io/post/%E8%87%AA%E7%84%B6%E5%B8%B8%E6%95%B0%E7%9A%84%E7%9B%B8%E5%85%B3%E8%A1%A5%E5%85%85/</link>
@@ -34,7 +41,7 @@
       <link>https://Lucian73x.github.io/contents/</link>
       <pubDate>Mon, 16 Feb 2026 00:00:00 +0000</pubDate>
       <guid>https://Lucian73x.github.io/contents/</guid>
-      <description>&lt;h1 id=&#34;数学&#34;&gt;数学&lt;/h1&gt;&#xA;&lt;h4 id=&#34;机器学习的数学&#34;&gt;&lt;a href=&#34;https://Lucian73x.github.io/math/contents_ml_math/&#34;&gt;机器学习的数学&lt;/a&gt;&lt;/h4&gt;&#xA;&lt;h1 id=&#34;计算机&#34;&gt;计算机&lt;/h1&gt;&#xA;&lt;h1 id=&#34;杂项&#34;&gt;杂项&lt;/h1&gt;</description>
+      <description>&lt;h3 id=&#34;数学&#34;&gt;数学&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://Lucian73x.github.io/math/contents_ml_math/&#34;&gt;机器学习的数学&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;计算机&#34;&gt;计算机&lt;/h3&gt;&#xA;&lt;h3 id=&#34;杂项&#34;&gt;杂项&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://Lucian73x.github.io/post/vscode%E5%BF%AB%E6%8D%B7%E9%94%AE%E9%80%9F%E6%9F%A5mac%E7%89%88/&#34;&gt;VSCode快捷键&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>
 </rss>
