@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Windows
+Thumbs.db
+
+# 编辑器
+.vscode/
+.idea/
+
+# 临时文件
+*.log
