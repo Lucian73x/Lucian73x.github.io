@@ -1,0 +1,165 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+      
+        Python 实用随笔 | Lucian73x&#39;s Note
+      
+    </title>
+
+    
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/custom.css">
+
+    <link rel="stylesheet" href="/css/math-env.css">
+
+
+  </head>
+
+  <body>
+    <nav>
+      <ul class="menu">
+        
+        <li><a href="/">Home</a></li>
+        
+        <li><a href="/post/">Posts</a></li>
+        
+        <li><a href="/about/">About</a></li>
+        
+      </ul>
+      <hr/>
+    </nav>
+
+    
+    <script src="/js/code-copy.js" defer></script>
+
+
+<style>
+     
+    .article-meta {
+        padding: 1.5rem 2rem;       
+        border-radius: 4px;         
+        text-align: center;         
+        margin-bottom: 2rem;
+    }
+
+     
+    .article-meta .title {
+        display: block;
+        font-family: "Times New Roman", Times, serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #111;
+        margin: 0 0 0.5rem 0;       
+        line-height: 1.2;
+    }
+
+     
+     
+    .article-meta .date {
+         
+        font-size: 1rem;
+        font-weight: normal;
+        color: #555;
+        margin: 0.2rem 0;           
+    }
+
+     
+    .meta-info-row {
+        display: flex;
+        justify-content: center;
+        gap: 15px;                  
+         
+    }
+
+    main {
+        line-height: 1.7;
+        font-size: 1.05rem;
+        color: #333;
+    }
+</style>
+
+<div class="article-meta">
+    <span class="title">Python 实用随笔</span>
+
+    <div class="meta-info-row">
+        
+
+        
+
+        
+            <span class="date">2026-02-19</span>
+        
+    </div>
+</div>
+
+<main>
+    <p>记录 <code>Python3</code> 在日常生活中的一些应用, 以供日后查询.</p>
+<h3 id="函数图像">函数图像</h3>
+<p>以 logistic 函数为例.</p>
+<p>有两种风格, 一种是标准的带坐标轴的图像, 另一种是简单的图像.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#177500"># 导入使用的库</span>
+</span></span><span style="display:flex;"><span><span style="color:#a90d91">import</span> <span style="color:#000">numpy</span> <span style="color:#a90d91">as</span> <span style="color:#000">np</span>
+</span></span><span style="display:flex;"><span><span style="color:#a90d91">import</span> <span style="color:#000">matplotlib.pyplot</span> <span style="color:#a90d91">as</span> <span style="color:#000">plt</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000">x</span> <span style="color:#000">=</span> <span style="color:#000">np</span><span style="color:#000">.</span><span style="color:#000">linspace</span>(<span style="color:#000">-</span><span style="color:#1c01ce">6</span>, <span style="color:#1c01ce">6</span>, <span style="color:#1c01ce">500</span>) <span style="color:#177500"># 在 -6 到 6 之间均匀生成500个数, 用作 x 的值</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">y</span> <span style="color:#000">=</span> <span style="color:#1c01ce">1</span> <span style="color:#000">/</span> (<span style="color:#1c01ce">1</span> <span style="color:#000">+</span> <span style="color:#000">np</span><span style="color:#000">.</span><span style="color:#000">exp</span>(<span style="color:#000">-</span><span style="color:#000">x</span>)) <span style="color:#177500"># y 对应的值</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#177500"># 1. 标准的图像</span>
+</span></span><span style="display:flex;"><span><span style="color:#177500"># 创建画布和坐标系</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">fig</span>, <span style="color:#000">ax</span> <span style="color:#000">=</span> <span style="color:#000">plt</span><span style="color:#000">.</span><span style="color:#000">subplots</span>()
+</span></span><span style="display:flex;"><span><span style="color:#000">ax</span><span style="color:#000">.</span><span style="color:#000">plot</span>(<span style="color:#000">x</span>, <span style="color:#000">y</span>) <span style="color:#177500"># 用 x 和 y 的数据画出函数曲线</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">ax</span><span style="color:#000">.</span><span style="color:#000">set_title</span>(<span style="color:#c41a16">&#34;Logistic Function&#34;</span>) <span style="color:#177500"># 图像标题</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">ax</span><span style="color:#000">.</span><span style="color:#000">grid</span>(<span style="color:#a90d91">False</span>) <span style="color:#177500"># 不显示背景表格</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">ax</span><span style="color:#000">.</span><span style="color:#000">spines</span>[<span style="color:#c41a16">&#34;left&#34;</span>]<span style="color:#000">.</span><span style="color:#000">set_position</span>(<span style="color:#c41a16">&#34;zero&#34;</span>) <span style="color:#177500"># y 轴</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">ax</span><span style="color:#000">.</span><span style="color:#000">spines</span>[<span style="color:#c41a16">&#34;bottom&#34;</span>]<span style="color:#000">.</span><span style="color:#000">set_position</span>(<span style="color:#c41a16">&#34;zero&#34;</span>) <span style="color:#177500"># x 轴</span>
+</span></span><span style="display:flex;"><span><span style="color:#177500"># 隐藏右边和下边的边框线</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">ax</span><span style="color:#000">.</span><span style="color:#000">spines</span>[<span style="color:#c41a16">&#34;right&#34;</span>]<span style="color:#000">.</span><span style="color:#000">set_visible</span>(<span style="color:#a90d91">False</span>)
+</span></span><span style="display:flex;"><span><span style="color:#000">ax</span><span style="color:#000">.</span><span style="color:#000">spines</span>[<span style="color:#c41a16">&#34;top&#34;</span>]<span style="color:#000">.</span><span style="color:#000">set_visible</span>(<span style="color:#a90d91">False</span>)
+</span></span><span style="display:flex;"><span><span style="color:#177500"># 设置坐标系的箭头</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">ax</span><span style="color:#000">.</span><span style="color:#000">plot</span>(<span style="color:#1c01ce">1</span>, <span style="color:#1c01ce">0</span>, <span style="color:#c41a16">&#34;&gt;k&#34;</span>, <span style="color:#000">transform</span><span style="color:#000">=</span><span style="color:#000">ax</span><span style="color:#000">.</span><span style="color:#000">get_yaxis_transform</span>(), <span style="color:#000">clip_on</span><span style="color:#000">=</span><span style="color:#a90d91">False</span>)
+</span></span><span style="display:flex;"><span><span style="color:#000">ax</span><span style="color:#000">.</span><span style="color:#000">plot</span>(<span style="color:#1c01ce">0</span>, <span style="color:#1c01ce">1</span>, <span style="color:#c41a16">&#34;^k&#34;</span>, <span style="color:#000">transform</span><span style="color:#000">=</span><span style="color:#000">ax</span><span style="color:#000">.</span><span style="color:#000">get_xaxis_transform</span>(), <span style="color:#000">clip_on</span><span style="color:#000">=</span><span style="color:#a90d91">False</span>)
+</span></span><span style="display:flex;"><span><span style="color:#177500"># 设置坐标系的标识</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">ax</span><span style="color:#000">.</span><span style="color:#000">set_xlabel</span>(<span style="color:#c41a16">&#34;X&#34;</span>, <span style="color:#000">loc</span><span style="color:#000">=</span><span style="color:#c41a16">&#34;right&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#000">ax</span><span style="color:#000">.</span><span style="color:#000">set_ylabel</span>(<span style="color:#c41a16">&#34;Y&#34;</span>, <span style="color:#000">loc</span><span style="color:#000">=</span><span style="color:#c41a16">&#34;top&#34;</span>, <span style="color:#000">rotation</span><span style="color:#000">=</span><span style="color:#1c01ce">0</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#177500"># 2. 简单的图像</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">plt</span><span style="color:#000">.</span><span style="color:#000">plot</span>(<span style="color:#000">x</span>, <span style="color:#000">y</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#177500"># 显示图像</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">plt</span><span style="color:#000">.</span><span style="color:#000">show</span>()
+</span></span></code></pre></div>
+</main>
+
+  <footer>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/math-code.min.js" defer></script>
+<script src="//cdn.jsdelivr.net/npm/katex/dist/katex.min.js" defer></script>
+<script src="//cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js" defer></script>
+<script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/render-katex.js" defer></script>
+
+<script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/center-img.min.js" defer></script>
+  
+  <hr/>
+  © <a href="https://github.com/Lucian73x">Lucian73x</a> 2026 &ndash; 2026
+  
+  </footer>
+  </body>
+</html>
