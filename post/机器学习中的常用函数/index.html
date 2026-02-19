@@ -1,0 +1,346 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+      
+        机器学习中的常用函数 | Lucian73x&#39;s Note
+      
+    </title>
+
+    
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/custom.css">
+
+    <link rel="stylesheet" href="/css/math-env.css">
+
+
+  </head>
+
+  <body>
+    <nav>
+      <ul class="menu">
+        
+        <li><a href="/">Home</a></li>
+        
+        <li><a href="/post/">Posts</a></li>
+        
+        <li><a href="/about/">About</a></li>
+        
+      </ul>
+      <hr/>
+    </nav>
+
+    
+    <script src="/js/code-copy.js" defer></script>
+
+
+<style>
+     
+    .article-meta {
+        padding: 1.5rem 2rem;       
+        border-radius: 4px;         
+        text-align: center;         
+        margin-bottom: 2rem;
+    }
+
+     
+    .article-meta .title {
+        display: block;
+        font-family: "Times New Roman", Times, serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #111;
+        margin: 0 0 0.5rem 0;       
+        line-height: 1.2;
+    }
+
+     
+     
+    .article-meta .date {
+         
+        font-size: 1rem;
+        font-weight: normal;
+        color: #555;
+        margin: 0.2rem 0;           
+    }
+
+     
+    .meta-info-row {
+        display: flex;
+        justify-content: center;
+        gap: 15px;                  
+         
+    }
+
+    main {
+        line-height: 1.7;
+        font-size: 1.05rem;
+        color: #333;
+    }
+</style>
+
+<div class="article-meta">
+    <span class="title">机器学习中的常用函数</span>
+
+    <div class="meta-info-row">
+        
+
+        
+
+        
+            <span class="date">2026-02-19</span>
+        
+    </div>
+</div>
+
+<main>
+    <h3 id="logistic-函数">logistic 函数</h3>
+<div class="math-block definition">
+  <div class="math-title">
+    Definition (logistic 函数)
+  </div>
+  <div class="math-content">
+    \[
+    f(x) = \frac{1}{1+e^{-x}}
+\]
+  </div>
+</div>
+
+
+<h4 id="定义域和值域">定义域和值域</h4>
+<ul>
+<li>定义域: \((-\infty, +\infty)\)</li>
+<li>值域: \((0, 1)\)</li>
+</ul>
+<h4 id="图像">图像</h4>
+<img src="https://i.ibb.co/cc2r4By2/logistic.png" style="width:60%; display:block; margin:1.5em auto;">
+<h4 id="导数">导数</h4>
+<div class="math-block solution">
+  <div class="math-title">
+    Solution.
+  </div>
+  <div class="math-content">
+    <p>计算有
+</p>
+\[
+    f'(x) = \frac{e^{-x}}{(1+e^{-x})^2} = \frac{1}{1+e^{-x}}\frac{e^{-x}}{1+e^{-x}} = \frac{1}{1+e^{-x}}(1 - \frac{1}{1+e^{-x}}),
+\]<p>
+故有
+</p>
+\[
+    f'(x) = f(x)(1 - f(x)).
+\]
+  </div>
+</div>
+
+
+<h4 id="作用">作用</h4>
+<p>在 logistic 回归和神经网络中会使用到, 可作为神经网络的激活函数.</p>
+<hr>
+<h3 id="relu-函数">ReLU 函数</h3>
+<h4 id="定义">定义</h4>
+<div class="math-block definition">
+  <div class="math-title">
+    Definition (ReLU 函数)
+  </div>
+  <div class="math-content">
+    \[
+    f(x) = \begin{cases}
+    x,\ x \ge 0 \\
+    0,\ x < 0
+    \end{cases}
+\]
+  </div>
+</div>
+
+
+<h4 id="定义域和值域-1">定义域和值域</h4>
+<ul>
+<li>定义域: \((-\infty, +\infty)\)</li>
+<li>值域: \([0, \infty)\)</li>
+</ul>
+<h4 id="图像-1">图像</h4>
+<img src="https://i.ibb.co/KkRfWcX/Re-LU.png" style="width:60%; display:block; margin:1.5em auto;">
+<h4 id="导数-1">导数</h4>
+<p>ReLU 函数在原点处不可导.</p>
+<div class="math-block solution">
+  <div class="math-title">
+    Solution.
+  </div>
+  <div class="math-content">
+    \[
+    f'(x) = \begin{cases}
+    1, &x > 0 \\
+    0, &x < 0
+    \end{cases}
+\]
+  </div>
+</div>
+
+
+<h4 id="作用-1">作用</h4>
+<p>ReLU 函数常用做神经网络的激活函数.</p>
+<hr>
+<h3 id="softplus-函数">softplus 函数</h3>
+<h4 id="定义-1">定义</h4>
+<p>softplus 函数可以看作是 ReLU 函数的光滑近似.
+<div class="math-block definition">
+  <div class="math-title">
+    Definition (softplus 函数)
+  </div>
+  <div class="math-content">
+    \[
+    f(x) = \ln{(1 + e^x)}
+\]
+  </div>
+</div>
+
+</p>
+<h4 id="定义域和值域-2">定义域和值域</h4>
+<ul>
+<li>定义域: \((-\infty, +\infty)\)</li>
+<li>值域: \((0, +\infty)\)</li>
+</ul>
+<h4 id="图像-2">图像</h4>
+<img src="https://i.ibb.co/HT3LKfKp/softplus.png" style="width:60%; display:block; margin:1.5em auto;">
+<h4 id="导数-2">导数</h4>
+<p>softplus 的导数为 logistic 函数.
+<div class="math-block solution">
+  <div class="math-title">
+    Solution.
+  </div>
+  <div class="math-content">
+    \[
+    f'(x) = \frac{e^x}{1 + e^x} = \frac{1}{1 + e^{-x}}
+\]
+  </div>
+</div>
+
+</p>
+<hr>
+<h3 id="绝对值函数">绝对值函数</h3>
+<h4 id="定义-2">定义</h4>
+<div class="math-block definition">
+  <div class="math-title">
+    Definition (绝对值函数)
+  </div>
+  <div class="math-content">
+    \[
+    f(x) = |x| = \begin{cases}
+    x, &x \ge 0 \\
+    -x, &x < 0
+    \end{cases}
+\]
+  </div>
+</div>
+
+
+<h4 id="定义域和值域-3">定义域和值域</h4>
+<ul>
+<li>定义域: \((-\infty, +\infty)\)</li>
+<li>值域: \([0, +\infty)\)</li>
+</ul>
+<h4 id="图像-3">图像</h4>
+<img src="https://i.ibb.co/bMQLXGY9/abs.png" style="width:60%; display:block; margin:1.5em auto;">
+<h4 id="导数-3">导数</h4>
+<p>绝对值函数在原点不可导.
+<div class="math-block solution">
+  <div class="math-title">
+    Solution.
+  </div>
+  <div class="math-content">
+    \[
+    f'(x) = \begin{cases}
+    1, &x > 0 \\
+    -1, &x < 0
+    \end{cases}
+\]
+  </div>
+</div>
+
+</p>
+<h4 id="作用-2">作用</h4>
+<p>绝对值函数常用于构造机器学习算法训练目标函数中的正则化项.</p>
+<hr>
+<h3 id="sgn-函数">sgn 函数</h3>
+<h4 id="定义-3">定义</h4>
+<div class="math-block definition">
+  <div class="math-title">
+    Definition (符号函数)
+  </div>
+  <div class="math-content">
+    \[
+    f(x) = \begin{cases}
+    1, &x \ge 0 \\
+    -1, &x < 0
+    \end{cases}
+\]
+  </div>
+</div>
+
+
+<h4 id="定义域和值域-4">定义域和值域</h4>
+<ul>
+<li>定义域: \((-\infty, +\infty)\)</li>
+<li>值域: \([-1, 1]\)</li>
+</ul>
+<h4 id="图像-4">图像</h4>
+<img src="https://i.ibb.co/3mV4YbLH/sgn.png" style="width:60%; display:block; margin:1.5em auto;">
+<h4 id="导数-4">导数</h4>
+<p>sgn 函数在原点不可导, 其他点导数均为 0.
+<div class="math-block solution">
+  <div class="math-title">
+    Solution.
+  </div>
+  <div class="math-content">
+    \[
+    f'(x) = \begin{cases}
+    0, &x \neq 0 \\
+    不可导, &x = 0
+    \end{cases}
+\]
+  </div>
+</div>
+
+</p>
+<h4 id="作用-3">作用</h4>
+<p>sgn 函数常用于分类器的预测函数, 表示二值化的分类结果. 在支持向量机, logistic 回归中都被使用. 函数值为 1 时表示分类结果为正样本, -1 时为负样本.</p>
+<hr>
+<h3 id="注">注</h3>
+<p>ReLu, 绝对值函数和 sgn 函数都是几乎处处可导的函数.</p>
+<p>人工神经网络中的激活函数需要满足几乎处处可导的条件, 以保证在训练时能够使用梯度下降法求解函数的极值.</p>
+
+</main>
+
+  <footer>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/math-code.min.js" defer></script>
+<script src="//cdn.jsdelivr.net/npm/katex/dist/katex.min.js" defer></script>
+<script src="//cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js" defer></script>
+<script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/render-katex.js" defer></script>
+
+<script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/center-img.min.js" defer></script>
+  
+  <hr/>
+  © <a href="https://github.com/Lucian73x">Lucian73x</a> 2026 &ndash; 2026
+  
+  </footer>
+  </body>
+</html>
